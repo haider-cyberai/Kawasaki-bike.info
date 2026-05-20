@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 
 import os
+st.write(os.listdir())
+st.write(os.listdir("data"))
 
 BASE_DIR = os.path.dirname(__file__)
 CSV_PATH = os.path.join(BASE_DIR, "data", "kawasaki_bikes.csv")
