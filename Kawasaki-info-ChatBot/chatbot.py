@@ -1,18 +1,17 @@
+from difflib import get_close_matches
 import pandas as pd
-
-# Load dataset
-df = pd.read_csv("data/Kawasaki_bikes.csv")
-
+df = pd.read_csv("data/kawasaki_bikes.csv")
 def search_bikes(user_query):
+
+
     query = user_query.lower()
+    results = df.copy()
 
-    results = []
+    # fuzzy model match
+    models = df["model"].str.lower().tolist()
+    match = get_close_matches(query, models, n=1, cutoff=0.4)
 
-    for _, row in df.iterrows():
-
-        bike_info = " ".join(map(str, row.values)).lower()
-
-        if query in bike_info:
-            results.append(row)
+    if match:
+        results = df[df["model"].str.lower() == match[0]]
 
     return results
