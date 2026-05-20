@@ -8,7 +8,7 @@ st.write(os.listdir("data"))
 BASE_DIR = os.path.dirname(__file__)
 CSV_PATH = os.path.join(BASE_DIR, "data", "kawasaki_bikes.csv")
 
-df = pd.read_csv(CSV_PATH)s.csv")
+df = pd.read_csv(CSV_PATH)
 
 st.title("🏍 Kawasaki AI Bike Chatbot")
 
