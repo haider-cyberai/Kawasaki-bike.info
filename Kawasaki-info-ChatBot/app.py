@@ -1,24 +1,27 @@
 import streamlit as st
 import pandas as pd
-
 import os
-st.write(os.listdir())
-st.write(os.listdir("data"))
+from chatbot import search_bikes
 
+# ---- SAFE PATH (WORKS ON STREAMLIT CLOUD) ----
 BASE_DIR = os.path.dirname(__file__)
 CSV_PATH = os.path.join(BASE_DIR, "data", "kawasaki_bikes.csv")
 
 df = pd.read_csv(CSV_PATH)
 
-st.title("🏍 Kawasaki AI Bike Chatbot")
+# ---- UI ----
+st.set_page_config(page_title="Kawasaki Showroom", layout="wide")
 
-user_input = st.text_input("Search bikes")
+st.title("🏍 Kawasaki AI Bike Showroom")
 
+user_input = st.text_input("Search or Compare bikes (e.g. Ninja vs R1)")
+
+# ---- SEARCH / COMPARE LOGIC ----
 if user_input:
 
     query = user_input.lower()
 
-    #COMPARE MODE
+    # 🆚 COMPARE MODE
     if "vs" in query:
 
         bike1, bike2 = query.split("vs")
@@ -35,24 +38,19 @@ if user_input:
                 [b1.iloc[0]["model"], b2.iloc[0]["model"]]
             )]
 
-            st.dataframe(compare_df.set_index("model"))
+            st.subheader("🆚 Comparison Result")
+            st.dataframe(compare_df.set_index("model"), use_container_width=True)
 
         else:
             st.error("One or both bikes not found")
-    query = user_input.lower()
 
-    #FILTERS
-    if "fastest" in query:
-        df = df.sort_values("top_speed_kmh", ascending=False)
+    # 🔍 NORMAL SEARCH
+    else:
+        results = search_bikes(user_input)
 
-    elif "cheapest" in query:
-        df = df.sort_values("Price_usd", ascending=True)
+        st.subheader("🔍 Search Results")
+        st.dataframe(results, use_container_width=True)
 
-    elif "highest hp" in query:
-        df = df.sort_values("hp", ascending=False)
-
-    elif "lightest" in query:
-        df = df.sort_values("weight_kg", ascending=True)
-
-    # 📊 SHOW RESULT
-    st.dataframe(df)
+# ---- FULL TABLE (OPTIONAL VIEW) ----
+st.subheader("📊 Full Bike Database")
+st.dataframe(df, use_container_width=True)
