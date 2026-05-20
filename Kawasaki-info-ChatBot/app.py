@@ -3,7 +3,7 @@ import pandas as pd
 
 df = pd.read_csv("data/kawasaki_bikes.csv")
 
-st.title("🏍 Kawasaki Bike Chatbot")
+st.title("🏍 Kawasaki AI Bike Chatbot")
 
 user_input = st.text_input("Search bikes")
 
