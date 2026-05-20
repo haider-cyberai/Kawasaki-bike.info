@@ -1,7 +1,12 @@
 import streamlit as st
 import pandas as pd
 
-df = pd.read_csv("data/kawasaki_bikes.csv")
+import os
+
+BASE_DIR = os.path.dirname(__file__)
+CSV_PATH = os.path.join(BASE_DIR, "data", "kawasaki_bikes.csv")
+
+df = pd.read_csv(CSV_PATH)s.csv")
 
 st.title("🏍 Kawasaki AI Bike Chatbot")
 
