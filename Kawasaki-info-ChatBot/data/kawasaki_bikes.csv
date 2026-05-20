@@ -1,0 +1,81 @@
+model,year,engine_cc,hp,torque_nm,weight_kg,top_speed_kmh,fuel_avg_kmpl,gears,fuel_type,Price_usd,Color
+
+Ninja ZX-12R,2000,1199,178,134,210,300,12,6,Petrol,12000,Lime Green / Black
+Ninja ZX-12R,2001,1199,178,134,210,300,12,6,Petrol,12000,Lime Green / Black
+Ninja ZX-12R,2002,1199,178,134,210,300,12,6,Petrol,12000,Lime Green / Black
+Ninja ZX-12R,2003,1199,178,134,210,300,12,6,Petrol,12000,Lime Green / Black
+Ninja ZX-12R,2004,1199,178,134,210,300,12,6,Petrol,12000,Lime Green / Black
+
+Ninja ZX-10R,2004,998,175,115,198,290,14,6,Petrol,13500,Lime Green
+Ninja ZX-10R,2005,998,175,115,198,290,14,6,Petrol,13500,Lime Green
+Ninja ZX-10R,2006,998,175,115,198,295,14,6,Petrol,13800,Lime Green / Black
+Ninja ZX-10R,2007,998,175,115,198,295,14,6,Petrol,13800,Lime Green / Black
+Ninja ZX-10R,2008,998,182,115,198,295,14,6,Petrol,14000,Lime Green
+Ninja ZX-10R,2009,998,182,115,198,295,14,6,Petrol,14000,Lime Green
+Ninja ZX-10R,2010,998,182,115,198,295,14,6,Petrol,14500,Lime Green
+Ninja ZX-10R,2011,998,197,112,198,300,14,6,Petrol,15000,Lime Green
+Ninja ZX-10R,2012,998,197,112,198,300,14,6,Petrol,15000,Lime Green
+Ninja ZX-10R,2013,998,197,112,198,300,14,6,Petrol,15000,Lime Green
+Ninja ZX-10R,2014,998,200,112,199,300,14,6,Petrol,15500,Lime Green
+Ninja ZX-10R,2015,998,200,112,199,300,14,6,Petrol,15500,Lime Green
+Ninja ZX-10R,2016,998,200,113,199,300,14,6,Petrol,16000,Lime Green
+Ninja ZX-10R,2017,998,200,113,206,300,14,6,Petrol,16000,Lime Green
+Ninja ZX-10R,2018,998,200,113,206,300,14,6,Petrol,16000,Lime Green
+Ninja ZX-10R,2019,998,203,114,207,300,14,6,Petrol,16500,Lime Green
+Ninja ZX-10R,2020,998,203,114,207,300,14,6,Petrol,16500,Lime Green
+Ninja ZX-10R,2021,998,203,114,207,300,14,6,Petrol,17000,Lime Green
+Ninja ZX-10R,2022,998,203,114,207,300,14,6,Petrol,17500,Lime Green
+Ninja ZX-10R,2023,998,203,114,207,300,14,6,Petrol,17500,Lime Green
+Ninja ZX-10R,2024,998,203,114,207,300,14,6,Petrol,17800,Lime Green
+Ninja ZX-10R,2025,998,203,114,207,300,14,6,Petrol,17800,Lime Green
+Ninja ZX-10R,2026,998,203,114,207,300,14,6,Petrol,18000,Lime Green
+
+Ninja 300,2013,296,39,27,172,180,28,6,Petrol,5000,Lime Green / White
+Ninja 300,2014,296,39,27,172,180,28,6,Petrol,5000,Lime Green / White
+Ninja 300,2015,296,39,27,172,180,28,6,Petrol,5200,Lime Green / White
+Ninja 300,2016,296,39,27,172,180,28,6,Petrol,5200,Lime Green / White
+Ninja 300,2017,296,39,27,172,180,28,6,Petrol,5200,Lime Green / White
+Ninja 300,2018,296,39,27,172,180,28,6,Petrol,5400,Lime Green / White
+
+Ninja 400,2018,399,49,38,168,190,26,6,Petrol,5500,Lime Green / Black
+Ninja 400,2019,399,49,38,168,190,26,6,Petrol,5500,Lime Green / Black
+Ninja 400,2020,399,49,38,168,190,26,6,Petrol,5500,Lime Green / Black
+Ninja 400,2021,399,49,38,168,190,26,6,Petrol,5600,Lime Green / Black
+Ninja 400,2022,399,49,38,168,190,26,6,Petrol,5600,Lime Green / Black
+Ninja 400,2023,399,49,38,168,190,26,6,Petrol,5800,Lime Green / Black
+Ninja 400,2024,399,49,38,168,190,26,6,Petrol,5800,Lime Green / Black
+Ninja 400,2025,399,49,38,168,190,26,6,Petrol,5900,Lime Green / Black
+Ninja 400,2026,399,49,38,168,190,26,6,Petrol,6000,Lime Green / Black
+
+Ninja 650,2006,649,72,64,193,210,23,6,Petrol,7000,Lime Green / Black
+Ninja 650,2007,649,72,64,193,210,23,6,Petrol,7000,Lime Green / Black
+Ninja 650,2008,649,72,64,193,210,23,6,Petrol,7000,Lime Green / Black
+Ninja 650,2009,649,72,64,193,210,23,6,Petrol,7200,Lime Green / Black
+Ninja 650,2010,649,72,64,193,210,23,6,Petrol,7200,Lime Green / Black
+Ninja 650,2011,649,72,64,193,210,23,6,Petrol,7200,Lime Green / Black
+Ninja 650,2012,649,72,64,193,210,23,6,Petrol,7500,Lime Green / Black
+Ninja 650,2013,649,72,64,193,210,23,6,Petrol,7500,Lime Green / Black
+Ninja 650,2014,649,72,64,193,210,23,6,Petrol,7500,Lime Green / Black
+Ninja 650,2015,649,67,64,193,210,23,6,Petrol,7600,Lime Green / Black
+Ninja 650,2016,649,67,64,193,210,23,6,Petrol,7600,Lime Green / Black
+Ninja 650,2017,649,67,64,193,210,23,6,Petrol,7700,Lime Green / Black
+Ninja 650,2018,649,67,64,193,210,23,6,Petrol,7700,Lime Green / Black
+Ninja 650,2019,649,67,64,193,210,23,6,Petrol,7800,Lime Green / Black
+Ninja 650,2020,649,67,64,193,210,23,6,Petrol,7800,Lime Green / Black
+Ninja 650,2021,649,67,64,193,210,23,6,Petrol,7900,Lime Green / Black
+Ninja 650,2022,649,67,64,193,210,23,6,Petrol,8000,Lime Green / Black
+Ninja 650,2023,649,67,64,193,210,23,6,Petrol,8200,Lime Green / Black
+Ninja 650,2024,649,67,64,193,210,23,6,Petrol,8300,Lime Green / Black
+Ninja 650,2025,649,67,64,193,210,23,6,Petrol,8400,Lime Green / Black
+Ninja 650,2026,649,67,64,193,210,23,6,Petrol,8500,Lime Green / Black
+
+Z900,2017,948,125,98,210,240,18,6,Petrol,9500,Lime Green
+Z900,2018,948,125,98,210,240,18,6,Petrol,9500,Lime Green
+Z900,2019,948,125,98,210,240,18,6,Petrol,9600,Lime Green
+Z900,2020,948,125,98,210,240,18,6,Petrol,9600,Lime Green
+Z900,2021,948,125,98,210,240,18,6,Petrol,9700,Lime Green
+Z900,2022,948,125,98,210,240,18,6,Petrol,9800,Lime Green
+Z900,2023,948,125,98,210,240,18,6,Petrol,9900,Lime Green
+Z900,2024,948,125,98,210,240,18,6,Petrol,10000,Lime Green
+Z900,2025,948,125,98,210,240,18,6,Petrol,10100,Lime Green
+Z900,2026,948,125,98,210,240,18,6,Petrol,10200,Lime Green
