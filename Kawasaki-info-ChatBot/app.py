@@ -1,30 +1,51 @@
 import streamlit as st
-from chatbot import search_bikes
+import pandas as pd
+
+df = pd.read_csv("data/kawasaki_bikes.csv")
 
 st.title("🏍 Kawasaki Bike Chatbot")
 
-user_input = st.text_input("Ask about Kawasaki bikes")
+user_input = st.text_input("Search bikes")
 
 if user_input:
 
-    results = search_bikes(user_input)
+    query = user_input.lower()
 
-    if results:
+    #COMPARE MODE
+    if "vs" in query:
 
-        for bike in results:
+        bike1, bike2 = query.split("vs")
 
-            st.subheader(f"{bike['model']} ({bike['year']})")
+        bike1 = bike1.strip()
+        bike2 = bike2.strip()
 
-            st.write(f"Engine: {bike['engine_cc']} cc")
-            st.write(f"HP: {bike['hp']}")
-            st.write(f"Torque: {bike['torque_nm']} Nm")
-            st.write(f"Weight: {bike['weight_kg']} kg")
-            st.write(f"Top Speed: {bike['top_speed_kmh']} km/h")
-            st.write(f"Fuel Avg: {bike['fuel_avg_kmpl']} km/l")
-            st.write(f"Gears: {bike['gears']}")
-            st.write(f"Fuel Type: {bike['fuel_type']}")
-            st.write(f"Price: ${bike['Price_usd']}")
-            st.write(f"Color Options: {bike['Color']}")
+        b1 = df[df["model"].str.lower().str.contains(bike1)]
+        b2 = df[df["model"].str.lower().str.contains(bike2)]
 
-    else:
-        st.error("No matching bike found.")
+        if not b1.empty and not b2.empty:
+
+            compare_df = df[df["model"].isin(
+                [b1.iloc[0]["model"], b2.iloc[0]["model"]]
+            )]
+
+            st.dataframe(compare_df.set_index("model"))
+
+        else:
+            st.error("One or both bikes not found")
+    query = user_input.lower()
+
+    #FILTERS
+    if "fastest" in query:
+        df = df.sort_values("top_speed_kmh", ascending=False)
+
+    elif "cheapest" in query:
+        df = df.sort_values("Price_usd", ascending=True)
+
+    elif "highest hp" in query:
+        df = df.sort_values("hp", ascending=False)
+
+    elif "lightest" in query:
+        df = df.sort_values("weight_kg", ascending=True)
+
+    # 📊 SHOW RESULT
+    st.dataframe(df)
